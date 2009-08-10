@@ -227,7 +227,7 @@ namespace SubSonic.Query
                 var table = _query.FromTables.FirstOrDefault();
                 if (table != null) {
                     var col= table.Columns.SingleOrDefault(x => x.Name.Equals(s.ColumnName, StringComparison.InvariantCultureIgnoreCase));
-                    if (col != null) ;
+                    if (col != null)
                         s.DataType = col.DataType;
                 }
                 cmd.Parameters.Add(s.ParameterName, s.Value, s.DataType);
